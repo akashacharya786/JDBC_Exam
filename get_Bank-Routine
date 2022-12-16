@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_Bank`(in ac_number double,in MO_nth int,out total_amount double)
+BEGIN
+	select sum(Amount)*0.05 into total_amount
+    from Bank
+    where Account_Number = ac_number and mo_nth=extract(Month from Date_) ;
+END
