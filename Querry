@@ -1,0 +1,8 @@
+create table Bank (Account_Number double,Date_ date,Transfer_from double,Transfer_To double,Payee_Name varchar(20),Amount int,Sta_tus varchar(20),Transfer_type varchar(20));
+insert into Bank values(41110930123,'2022-07-15',41110930123,2123567890,"Akash",10000,"submitted","Telegraphic");
+insert into Bank values(41110930001,'2022-07-15',41110930001,2123567891,"Konda",15000,"submitted","Telegraphic");
+insert into Bank values(41110930002,'2022-07-15',41110930002,2123567892,"Sai kiran",100000,"submitted","Telegraphic");
+select * from Bank;
+insert into Bank values(41110930123,'2022-07-16',41110930123,2123567890,"Akash",15000,"submitted","Telegraphic");
+call get_Bank(41110930123,7,@tot);
+select @tot as total_amount;
