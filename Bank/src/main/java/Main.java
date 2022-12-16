@@ -16,6 +16,8 @@ public class Main {
           int Month = sc.nextInt();
           System.out.println("Enter the Bill Amount: \n");
           double Bill_amount = sc.nextDouble();
+          System.out.println("Account Number: "+(long)Acc_Number);
+          System.out.println("Month: "+Month);
 
           CallableStatement stmt = cn.prepareCall("{ call get_Bank(?,?,?)}");
           stmt.setDouble(1, Acc_Number);
